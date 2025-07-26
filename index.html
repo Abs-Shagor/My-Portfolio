@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title & logo -->
+    <link class="border rounded-full" rel="shortcut icon" href="images/logo-3.png" type="image/x-icon">
+    <title>Siddik | PortFolio</title>
+
+    <!-- DaisyUI x Tailwind -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- connect Fontawesome -->
+    <script src="https://kit.fontawesome.com/f00281792d.js" crossorigin="anonymous"></script>
+
+    <!-- connect CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-poppins text-white  max-w-[1300px] mx-auto px-5 flex gap-5 my-5">
+
+    <!-- Profile sidebar -->
+    <section class="bg-color-1  max-h-[550px]  border border-gray-600 rounded-3xl p-5">
+        <!-- profile pic -->
+        <div class="flex justify-center w-[130px] bg-color-2 rounded-t-3xl rounded-b-2xl mx-auto shadow-1 ">
+            <img class="w-[110px] h-full" src="images/profileee.png" alt="">
+        </div>
+        <div class="text-center">
+            <div class="relative w-[260px]">
+                <h3 class="text-[14px] text-shadow font-medium my-3">Mohammad Abu Bakkar Siddik</h3>
+                <span class="absolute w-[125px] h-[13px] top-1 left-17 shadow-1 animate-ping"></span>
+                <span class="absolute -top-1 right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></span>
+                <span class="absolute -top-1 right-1 w-3 h-3 bg-green-500 rounded-full border-1 border-white"></span>
+
+            </div>
+            <span class="text-[12px] bg-color-2 px-4 py-1 rounded-lg shadow-4">Web Developer</span>
+        </div>
+        <div class="border border-gray-600 mt-5 mb-8"></div>
+
+        <div class="grid gap-1">
+            <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver]">
+                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl shadow-3">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+                <div class="text-[12px]">
+                    <p>Email</p>
+                    <p>siddik56u@gmail.com</p>
+                </div>
+            </div>
+            <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver]">
+                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl shadow-3">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="text-[12px]">
+                    <p>Phone</p>
+                    <p>+880 1879097422</p>
+                </div>
+            </div>
+            <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver]">
+                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl  shadow-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="text-[12px]">
+                    <p>Location</p>
+                    <p>Chittagong, Bangladesh</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex justify-between mt-8 mx-2">
+            <div
+                class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2">
+                <a href="https://github.com/Abs-Shagor" target="_blank"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div
+                class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2">
+                <a href="https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div
+                class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2">
+                <a href="https://www.facebook.com/absShagor99" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+            <div
+                class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2">
+                <a href="https://x.com/abs_shagor?s=21" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Main Section -->
+    <main class="bg-color-1 w-[900px] h-[550px]  border border-gray-600 rounded-3xl p-5">
+
+        <!-- Navbar -->
+        <nav class="flex justify-center">
+            <span class="flex justify-between gap-5 bg-[#373738] rounded-full shadow-4 px-7 py-3">
+                <a href="" id="home-btn-id" class="border-b-2 "><i class="fa-solid fa-house"></i></a>
+                <a href="" id="about-me-btn-id" class=""><i class="fa-solid fa-user"></i></a>
+                <a href="" id="skills-btn-id" class=""><i class="fa-solid fa-code"></i></a>
+                <a href="" id="projects-btn-id" class=""><i class="fa-solid fa-folder"></i></a>
+                <a href="" id="achievements-btn-id" class=""><i class="fa-solid fa-trophy"></i></a>
+                <a href="" id="contact-me-btn-id" class=""><i class="fa-solid fa-envelope"></i></a>
+            </span>
+
+        </nav>
+
+        <!-- All Content section -->
+        <section class="h-[470px] overflow-y-auto pr-2">
+
+            <!-- Home section -->
+            <section id="home-section-id" class="">
+                <!-- <p class="text-[50px] mt-30 ml-30">Home section</p> -->
+                <div class="mt-10 max-w-[600px] mx-auto">
+                    <p class="text-[32px]">Turning Financial Concepts into Code</p>
+                    <p class="text-right">– That’s My Craft.</p>
+
+                    <p class="mt-10 mb-5">
+                        Hi👋, Myself Mohammad Abu Bakkar Siddik! A Full-Stack Developer crafting modern web
+                        applications with a passion for AI integration. <br><br> I specialize in creating efficient,
+                        scalable & user-friendly web applications using modern frameworks.Always excited to
+                        explore new opportunities! Let’s chat about tech, AI, or your next big idea.🔥
+                    </p>
+                    
+                    <button class=" button-1">
+                        <a href="resume & cv/Mohammad Abu Bakkar Siddik_CV.pdf" download="download"><i
+                                class="fa-solid fa-download"></i> Download CV</a>
+                    </button>
+                    <button id="get-in-touch-id" class="ml-5">
+                        <a href=""><i class="fa-solid fa-comment"></i> Get In Touch</a>
+                    </button>
+                </div>
+
+
+                <div class="overflow-hidden w-full mt-17">
+                    <p class="animate-scroll-left text-xl font-semibold">
+                        HTML CSS JavaScript Tailwind React Node Express MongoDB Git GitHub Firebase
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- about me section -->
+            <section id="about-me-section-id" class="hidden">
+                <p class="text-[50px] mt-30 ml-30">about me section</p>
+            </section>
+
+
+            <!-- skills section -->
+            <section id="skills-section-id" class="hidden">
+                <p class="text-[50px] mt-30 ml-30">skills section</p>
+            </section>
+
+
+            <!-- projects section -->
+            <section id="projects-section-id" class="hidden">
+                <p class="text-[50px] mt-30 ml-30">projects section</p>
+            </section>
+
+
+            <!-- achievements section -->
+            <section id="achievements-section-id" class="hidden">
+                <p class="text-[50px] mt-30 ml-30">achievements section</p>
+            </section>
+
+
+            <!-- contact me section -->
+            <section id="contact-me-section-id" class="hidden">
+                <p class="text-[50px] mt-30 ml-30">contact me section</p>
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <!-- connect with js -->
+    <script src="script.js"></script>
+</body>
+
+</html>
