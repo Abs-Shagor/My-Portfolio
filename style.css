@@ -37,7 +37,9 @@
 .shadow-5 {
   box-shadow: 0 0 10px 0 #6161f6;
 }
-
+.shadow-6 {
+  box-shadow: 0 0 10px 0 #00FFFF;
+}
 .text-shadow {
   text-shadow: 0 0 5px #bde5e1;
 }
@@ -52,11 +54,9 @@
     transform: translateX(-100%);
   }
 }
-
 .animate-scroll-left {
   animation: scroll-left 25s linear infinite;
   white-space: nowrap;
-  word-spacing: 25px;
 }
 
 /* download cv & resume buttons */
@@ -64,12 +64,14 @@
   cursor: pointer;
   padding-inline: 12px;
   padding-block: 6px;
-  background-image: linear-gradient(270deg, #ED4264,#eec248);
+  /* background-image: linear-gradient(270deg, #ED4264,#eec248); */
+  background-image: linear-gradient(270deg, #9F5AF5, #4080F6);
   border: none;
   border-radius: 12px;
   font-weight: medium;
   box-shadow: 0 0 3px 0 #bde5e1
 }
 .button-1:hover {
-  box-shadow: 0 0 5px 1px #bde5e1;
+  box-shadow: 0 0 5px 1px #9F5AF5;
 }
+

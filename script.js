@@ -4,6 +4,7 @@ sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'pr
 
 function changingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function(event) {
+        new Audio('sound/click2.mp3').play();
         event.preventDefault();
         for(const sectionId of sectionsId) {
             document.getElementById(sectionId).classList.add('hidden');
@@ -11,19 +12,20 @@ function changingSection(id1, id2) {
         document.getElementById(id2).classList.remove('hidden');
 
         for(const navButtonId of navButtionsId) {
-            document.getElementById(navButtonId).classList.remove('border-b-2');
+            document.getElementById(navButtonId).classList.remove('border-b-2', );
         }
-        document.getElementById(id1).classList.add('border-b-2');
+        document.getElementById(id1).classList.add('border-b-2',);
 
         if(id1=='get-in-touch-id') {
+            document.getElementById(id1).classList.remove('border-b-2');
             document.getElementById('contact-me-btn-id').classList.add('border-b-2');
         }
     })
 }
-changingSection('home-btn-id', 'home-section-id');
-changingSection('about-me-btn-id', 'about-me-section-id');
-changingSection('skills-btn-id', 'skills-section-id');
-changingSection('projects-btn-id', 'projects-section-id');
-changingSection('achievements-btn-id', 'achievements-section-id');
-changingSection('contact-me-btn-id', 'contact-me-section-id');
-changingSection('get-in-touch-id', 'contact-me-section-id');
+// changingSection('home-btn-id', 'home-section-id');
+// changingSection('about-me-btn-id', 'about-me-section-id');
+// changingSection('skills-btn-id', 'skills-section-id');
+// changingSection('projects-btn-id', 'projects-section-id');
+// changingSection('achievements-btn-id', 'achievements-section-id');
+// changingSection('contact-me-btn-id', 'contact-me-section-id');
+// changingSection('get-in-touch-id', 'contact-me-section-id');
