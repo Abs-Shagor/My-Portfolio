@@ -34,12 +34,53 @@
   box-shadow: 0 0 10px 0 #bde5e1;
 }
 
+
 .shadow-5 {
   box-shadow: 0 0 10px 0 #6161f6;
 }
 .shadow-6 {
   box-shadow: 0 0 10px 0 #00FFFF;
 }
+
+
+.shadow-7 {
+  box-shadow: 0 0 5px 0 #c084fc;
+}
+.shadow-7:hover {
+  box-shadow: 0 0 10px 0 #c084fc;
+}
+.shadow-8 {
+  box-shadow: 0 0 5px 0 #22C0D9;
+}
+.shadow-8:hover {
+  box-shadow: 0 0 10px 0 #22C0D9;
+}
+.shadow-9 {
+  box-shadow: 0 0 5px 0 #f43f5e;
+}
+.shadow-9:hover {
+  box-shadow: 0 0 10px 0 #f43f5e;
+}
+.shadow-10 {
+  box-shadow: 0 0 5px 0 #f97316;
+}
+.shadow-10:hover {
+  box-shadow: 0 0 10px 0 #f97316;
+}
+.shadow-11 {
+  box-shadow: 0 0 5px 0 #48D27B;
+}
+.shadow-11:hover {
+  box-shadow: 0 0 10px 0 #48D27B;
+}
+.shadow-12 {
+  box-shadow: 0 0 5px 0 #a2ddb7;
+}
+.shadow-12:hover {
+  box-shadow: 0 0 10px 0 #a2ddb7;
+}
+
+
 .text-shadow {
   text-shadow: 0 0 5px #bde5e1;
 }
@@ -58,18 +99,43 @@
   animation: scroll-left 25s linear infinite;
   white-space: nowrap;
 }
-
+.animate-scale {
+  transition: .7s ease;
+}
+.animate-scale:hover {
+  transform: scale(1.1);
+}
+.animate-scale-2 {
+  transition: .7s ease;
+}
+.animate-scale-2:hover {
+  background: #161625;
+  transform: scale(1.02);
+}
+.animate-scale-3 {
+  transition: .7s ease;
+}
+.animate-scale-3:hover {
+  transform: scale(1.02);
+}
+.animate-rotate {
+  transition: 1.2s ease;
+}
+.animate-rotate:hover {
+  cursor: pointer;
+  transform: rotate(-20deg);
+  box-shadow: 0 0 10px #0874F2;
+}
 /* download cv & resume buttons */
 .button-1 {
   cursor: pointer;
   padding-inline: 12px;
   padding-block: 6px;
-  /* background-image: linear-gradient(270deg, #ED4264,#eec248); */
   background-image: linear-gradient(270deg, #9F5AF5, #4080F6);
   border: none;
   border-radius: 12px;
   font-weight: medium;
-  box-shadow: 0 0 3px 0 #bde5e1
+  box-shadow: 0 0 3px 0 #bde5e1;
 }
 .button-1:hover {
   box-shadow: 0 0 5px 1px #9F5AF5;

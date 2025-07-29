@@ -1,6 +1,6 @@
 
-navButtionsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id', 'achievements-btn-id', 'contact-me-btn-id'];
-sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'achievements-section-id', 'contact-me-section-id'];
+navButtionsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id',  'contact-me-btn-id'];
+sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'contact-me-section-id'];
 
 function changingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function(event) {
