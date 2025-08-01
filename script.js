@@ -1,5 +1,5 @@
 
-navButtonsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id','achievements-btn-id', 'contact-me-btn-id'];
+navButtonsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id', 'achievements-btn-id', 'contact-me-btn-id'];
 // sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'contact-me-section-id'];
 
 function changingNavButton(id1) {
@@ -33,12 +33,36 @@ changingNavButton('contact-me-btn-id');
 changingNavButton('get-in-touch-id');
 
 
+
+function openLink(id, address) {
+    document.getElementById(id).addEventListener('click', function(event) {
+        event.preventDefault();
+        new Audio('sound/click2.mp3').play();
+        window.open(address, '_blank');
+    })
+}
+openLink('sidebar-github-id','https://github.com/Abs-Shagor');
+openLink('sidebar-linkedin-id','https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
+openLink('sidebar-facebook-id','https://www.facebook.com/absShagor99');
+openLink('sidebar-x-id','https://x.com/abs_shagor?s=21');
+
+openLink('about-me-cf-id','https://codeforces.com/profile/Abs_Shagor56');
+openLink('about-me-cc-id','https://www.codechef.com/users/abs_shagor56');
+openLink('about-me-lc-id','https://leetcode.com/u/AbsShagor56/');
+openLink('about-me-vj-id','https://vjudge.net/user/Abs_Shagor56');
+
+openLink('contact-me-linkedin-id','https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
+openLink('contact-me-github-id','https://github.com/Abs-Shagor');
+
+
+
+
 const container = document.getElementById("type-text-id-1");
 const text = "Send a Message";
 
 let i = 0;
 function typeText() {
-    if(i < text.length) {
+    if (i < text.length) {
         container.innerHTML += text[i];
         i++;
         setTimeout(typeText, 100); // speed

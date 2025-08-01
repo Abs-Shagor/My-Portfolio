@@ -25,7 +25,7 @@
 
 <body class="font-poppins text-white">
 
-    <main class="max-w-[1280px] mx-auto p-5 flex items-center gap-5 ">
+    <main class="max-w-[1380px] flex mx-auto p-5 items-center gap-5 ">
         <!-- Profile sidebar -->
         <section class="bg-color-1 max-h-[550px]  border border-gray-600 rounded-3xl p-5">
             <div
@@ -47,51 +47,45 @@
 
             <div class="grid gap-1">
                 <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl shadow-3">
+                    <div class="card-logo-container shadow-3">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="text-[12px]">
-                        <p class="text-gray-200">Email</p>
-                        <p>siddik56u@gmail.com</p>
+                        <p class="font-semibold">Email</p>
+                        <p class="opacity-70">siddik56u@gmail.com</p>
                     </div>
                 </div>
                 <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl shadow-3">
+                    <div class="card-logo-container shadow-3">
                         <i class="fa-solid fa-phone"></i>
                     </div>
                     <div class="text-[12px]">
-                        <p class="text-gray-200">Phone</p>
-                        <p>+880 1879097422</p>
+                        <p class="font-semibold">Phone</p>
+                        <p class="opacity-70">+880 1879097422</p>
                     </div>
                 </div>
                 <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl  shadow-3">
+                    <div class="card-logo-container shadow-3">
                         <i class="fa-solid fa-location-dot"></i>
                     </div>
                     <div class="text-[12px]">
-                        <p class="text-gray-200">Location</p>
-                        <p class="">Chittagong, Bangladesh</p>
+                        <p class="font-semibold">Location</p>
+                        <p class="opacity-70">Chittagong, Bangladesh</p>
                     </div>
                 </div>
             </div>
             <div class="flex justify-between mt-8 mx-2">
-                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2 animate-scale"
-                    onclick="new Audio('sound/click2.mp3').play()">
-                    <a href="https://github.com/Abs-Shagor" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <div id="sidebar-github-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                    <i class="fa-brands fa-github"></i>
                 </div>
-                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2 animate-scale"
-                    onclick="new Audio('sound/click2.mp3').play()">
-                    <a href="https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/" target="_blank"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                <div id="sidebar-linkedin-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                    <i class="fa-brands fa-linkedin"></i>
                 </div>
-                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2 animate-scale"
-                    onclick="new Audio('sound/click2.mp3').play()">
-                    <a href="https://www.facebook.com/absShagor99" target="_blank"><i
-                            class="fa-brands fa-facebook"></i></a>
+                <div id="sidebar-facebook-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                    <i class="fa-brands fa-facebook"></i>
                 </div>
-                <div class="w-10 h-10 flex justify-center items-center bg-color-2 rounded-xl cursor-pointer shadow-2 hover-2 animate-scale"
-                    onclick="new Audio('sound/click2.mp3').play()">
-                    <a href="https://x.com/abs_shagor?s=21" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <div id="sidebar-x-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                    <i class="fa-brands fa-x-twitter"></i>
                 </div>
             </div>
         </section>
@@ -102,12 +96,18 @@
             <!-- Navbar -->
             <nav class="flex justify-center mb-5">
                 <span class="flex justify-between gap-5 bg-[#373738] rounded-full shadow-4 px-7 py-3 h-[50px]">
-                    <a href="#home-section-id" id="home-btn-id" class="border-b-2 animate-scale"><i class="fa-solid fa-house"></i></a>
-                    <a href="#about-me-section-id" id="about-me-btn-id" class="animate-scale"><i class="fa-solid fa-user"></i></a>
-                    <a href="#skills-section-id" id="skills-btn-id" class="animate-scale"><i class="fa-solid fa-code"></i></a>
-                    <a href="#projects-section-id" id="projects-btn-id" class="animate-scale"><i class="fa-solid fa-folder"></i></a>
-                    <a href="#achievements-section-id" id="achievements-btn-id" class="animate-scale"><i class="fa-solid fa-trophy"></i></a>
-                    <a href="#contact-me-section-id" id="contact-me-btn-id" class="animate-scale"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="#home-section-id" id="home-btn-id" class="border-b-2 animate-scale"><i
+                            class="fa-solid fa-house"></i></a>
+                    <a href="#about-me-section-id" id="about-me-btn-id" class="animate-scale"><i
+                            class="fa-solid fa-user"></i></a>
+                    <a href="#skills-section-id" id="skills-btn-id" class="animate-scale"><i
+                            class="fa-solid fa-code"></i></a>
+                    <a href="#projects-section-id" id="projects-btn-id" class="animate-scale"><i
+                            class="fa-solid fa-folder"></i></a>
+                    <a href="#achievements-section-id" id="achievements-btn-id" class="animate-scale"><i
+                            class="fa-solid fa-trophy"></i></a>
+                    <a href="#contact-me-section-id" id="contact-me-btn-id" class="animate-scale"><i
+                            class="fa-solid fa-envelope"></i></a>
                 </span>
 
             </nav>
@@ -144,18 +144,31 @@
                     <!-- animate section -->
                     <div
                         class="overflow-hidden mx-auto max-w-[300px] sm:max-w-[400px] md:max-w-[500px] lg:max-w-[600px] mt-15">
-                        <div class="animate-scroll-left text-xl font-semibold flex gap-[25px]">
-                            <p>HTML</p>
-                            <p>CSS</p>
+                        <div class="animate-scroll-left text-xl font-semibold flex gap-[25px]  min-w-max">
+                            <p>B.Sc. in CSE</p>
+                            <p>ICPC Asia Dhaka Regionalist 2023</p>
+                            <p>Specialist in Codeforces</p>
+                            <p>1700+ rating in Codechef</p>
+                            <p>C</p>
+                            <p>C++</p>
+                            <p>Python</p>
                             <p>JavaScript</p>
+                            <p>HTML5</p>
+                            <p>CSS3</p>
                             <p>Tailwind</p>
+                            <p>DaisyUI</p>
+                            <p>Selenium</p>
                             <p>Node</p>
                             <p>Express</p>
                             <p>MongoDB</p>
+                            <p>Convolution Neural Network</p>
+                            <p>TensorFlow</p>
+                            <p>Scikit-learn</p>
+                            <p>Numpy</p>
+                            <p>Pandas</p>
+                            <p>Matplotlib</p>
                             <p>Git</p>
                             <p>GitHub</p>
-                            <p>Firebase</p>
-                            <p>ICPC Dhaka Regionalist</p>
                         </div>
                     </div>
                 </section>
@@ -163,19 +176,23 @@
                 <!-- about me section -->
                 <section id="about-me-section-id" class="mt-20">
                     <!-- about me heading -->
-                    <div class=" mx-auto text-center">
-                        <h1
-                            class="text-[32px] font-bold bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] text-transparent bg-clip-text inline-block ">
-                            About Me
-                        </h1>
-                        <p class="text-gray-300 text-justify">Passionate <span class="border-b-1">Full-Stack
-                                Developer</span> and <span class="border-b-1">Competitive Programmer</span>. I build
-                            modern web applications with AI integrations, blending development with algorithmic
-                            problem-solving. I’ve participated in 15+ national-level programming contests including
-                            <span class="border-b-1">ICPC
-                                Asia Dhaka Regional</span> and contributed to impactful <span
-                                class="border-b-1">research projects</span> like ASD detection.
-                        </p>
+                    <div class="max-w-[770px] mx-auto text-center">
+                        <h1 class="title-design">About Me</h1>
+                        <div class="title-description-design relative">
+                            <span class="top-left-corner-border"></span>
+                            <span class="top-right-corner-border"></span>
+                            <span class="bottom-left-corner-border"></span>
+                            <span class="bottom-right-corner-border"></span>
+
+                            <p class="px-6 py-3">
+                                Passionate <span class="border-b-1">Full-Stack Developer</span> and <span
+                                    class="border-b-1">Competitive Programmer</span>. I build
+                                modern web applications with AI integrations, blending development with algorithmic
+                                problem-solving. I’ve participated in 15+ national-level programming contests including
+                                <span class="border-b-1">ICPC Asia Dhaka Regional</span> and contributed to impactful
+                                <span class="border-b-1">research projects</span> like ASD detection.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- Milestones -->
@@ -185,7 +202,7 @@
                             <i class="fa-solid fa-rocket"></i> Milestones
                         </h2>
 
-                        <div class="grid grid-cols-4 text-center mx-5">
+                        <div class="grid grid-cols-4 gap-5 text-center">
                             <div>
                                 <p class="text-[24px] font-bold">+1</p>
                                 <p class="text-gray-300">YEARS OF EXPERIENCE</p>
@@ -214,9 +231,11 @@
 
                         <div
                             class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl px-5 py-7 mx-5 space-y-2 animate-scale-2">
-                            <h3 class="text-[20px] font-semibold">Bachelor of Science in Computer Science & Engineering
+                            <h3 class="text-[20px] font-semibold">Bachelor of Science in Computer Science &
+                                Engineering
                             </h3>
-                            <p class="text-gray-300 font-medium">CGPA: <span class="border-b-1">3.82 out of 4</span></p>
+                            <p class="text-gray-300 font-medium">CGPA: <span class="border-b-1">3.82 out of 4</span>
+                            </p>
                             <p class="text-gray-300">International Islamic University Chittagong </p>
                             <div class="flex gap-5 text-gray-300">
                                 <p><i class="fa-regular fa-calendar"></i> January 2021 – January 2025</p>
@@ -243,7 +262,8 @@
                                 <div
                                     class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl px-5 py-7 mx-5 space-y-2 animate-scale-2">
                                     <h3 class="text-[20px] font-semibold">Teaching Assistant </h3>
-                                    <p class="text-gray-300">Dept. of CSE, International Islamic University Chittagong
+                                    <p class="text-gray-300">Dept. of CSE, International Islamic University
+                                        Chittagong
                                     </p>
                                     <p class="text-gray-300 ">Courses: Competitive Programming 1 & 2</p>
                                     <div class="flex gap-5 text-gray-300">
@@ -260,8 +280,10 @@
                                 <!-- Card Content -->
                                 <div
                                     class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl px-5 py-7 mx-5 space-y-2 animate-scale-2">
-                                    <h3 class="text-[20px] font-semibold">Competitive Programming Bootcamp Mentor </h3>
-                                    <p class="text-gray-300">Dept. of CSE, International Islamic University Chittagong
+                                    <h3 class="text-[20px] font-semibold">Competitive Programming Bootcamp Mentor
+                                    </h3>
+                                    <p class="text-gray-300">Dept. of CSE, International Islamic University
+                                        Chittagong
                                     </p>
                                     <div class="flex gap-5 text-gray-300">
                                         <p><i class="fa-regular fa-calendar"></i> January 2022 – June 2022</p>
@@ -291,26 +313,26 @@
 
                             <!-- <h3 class="text-[20px] font-semibold mt-5">Online Judges </h3> -->
                             <div class="flex gap-5 justify-center">
-                                <a href="https://codeforces.com/profile/Abs_Shagor56" target="_blank"
-                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 animate-scale">
+                                <div id="about-me-cf-id"
+                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 cursor-pointer animate-scale">
                                     <img class="w-10 h-10"
                                         src="https://img.icons8.com/?size=80&id=YSy0lU4Y0X4z&format=png" alt="">
                                     <p class="text-gray-300">Codeforces</p>
-                                </a>
-                                <a href="https://www.codechef.com/users/abs_shagor56" target="_blank"
-                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 animate-scale">
+                                </div>
+                                <div id="about-me-cc-id"
+                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 cursor-pointer animate-scale">
                                     <img class="w-12 h-12"
                                         src="https://img.icons8.com/?size=80&id=Wq4dyyhFKRz6&format=png" alt="">
                                     <p class="text-gray-300">Codechef</p>
-                                </a>
-                                <a href="https://leetcode.com/u/AbsShagor56/" target="_blank"
-                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 animate-scale">
+                                </div>
+                                <a id="about-me-lc-id"
+                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 cursor-pointer animate-scale">
                                     <img class="w-10 h-10"
                                         src="https://img.icons8.com/?size=80&id=wDGo581Ea5Nf&format=png" alt="">
                                     <p class="text-gray-300">Leetcode</p>
                                 </a>
-                                <a href="https://vjudge.net/user/Abs_Shagor56" target="_blank"
-                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 animate-scale">
+                                <a id="about-me-vj-id"
+                                    class="grid justify-items-center h-20 w-24 hover:rounded-xl hover-2 cursor-pointer animate-scale">
                                     <img class="w-10 h-10"
                                         src="https://img.icons8.com/?size=48&id=uLaytFdQhTaZ&format=png" alt="">
                                     <p class="text-gray-300">UVA</p>
@@ -353,7 +375,8 @@
 
                         <div
                             class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl px-5 py-7 mx-5 space-y-2 animate-scale-2">
-                            <h3 class="text-[20px] font-semibold">International Collegiate Programming Contest (ICPC)
+                            <h3 class="text-[20px] font-semibold">International Collegiate Programming Contest
+                                (ICPC)
                             </h3>
                             <p class="text-gray-300 text-justify">
                                 Qualified for and participated in International
@@ -361,24 +384,29 @@
                                 2023 hosted by Bangladesh University of Business and Technology (BUBT).
                             </p>
 
-                            <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Inter</span> University
+                            <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Inter</span>
+                                University
                                 Programming Contest (IUPC) </h3>
                             <div class="text-gray-300 text-justify">
                                 <li>2nd Runner Up among 70 Teams in IIUC Inter University Programming Contest (IUPC)
                                     2023.</li>
                                 <li>11th among 48 Teams in CU Inter University Programming Contest (IUPC) 2024.</li>
-                                <li>24th among 108 Teams in IUT Inter University Programming Contest (IUPC) 2024.</li>
+                                <li>24th among 108 Teams in IUT Inter University Programming Contest (IUPC) 2024.
+                                </li>
                                 <li>25th among 70 Teams in PU Inter University Programming Contest (IUPC) 2024.</li>
-                                <li>43th among 160 Teams in KUET Inter University Programming Contest (IUPC) 2025.</li>
+                                <li>43th among 160 Teams in KUET Inter University Programming Contest (IUPC) 2025.
+                                </li>
                                 <li>Also participated in BUET IUPC, CUET IUPC, SUST IUPC, SEC IUPC.</li>
                             </div>
 
-                            <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Intra</span> University
+                            <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Intra</span>
+                                University
                                 Programming Contest (IUPC) </h3>
                             <div class="text-gray-300 text-justify">
                                 <li>2nd Runner Up in IIUC Intra-University Programming Contest 2021 organized by
                                     IIUCCPS.</li>
-                                <li>2nd Runner Up in IIUC Intra-University Programming Contest 2023 organized by IIUCCPS
+                                <li>2nd Runner Up in IIUC Intra-University Programming Contest 2023 organized by
+                                    IIUCCPS
                                 </li>
 
                             </div>
@@ -397,19 +425,18 @@
                 <!-- Technical Skills section -->
                 <section id="skills-section-id" class="mt-20">
                     <!-- Technical Skills heading -->
-                    <div class=" mx-auto text-center">
-                        <h1
-                            class="text-[32px] font-bold bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] text-transparent bg-clip-text inline-block ">
-                            Technical Skills</h1>
-                        <p class="text-gray-300 text-justify">A detailed showcase of my multidisciplinary technical
+                    <div class="max-w-[770px] mx-auto text-center">
+                        <h1 class="title-design">Technical Skills</h1>
+                        <p class="title-description-design">
+                            A detailed showcase of my multidisciplinary technical
                             skills, covering Programming Languages, Frameworks, Tools/Utilities, AI/ML systems, and
-                            others related domains.</p>
+                            others related domains.
+                        </p>
                     </div>
 
                     <div class="grid grid-cols-2 gap-10 mt-10">
                         <!-- Programming Languages card -->
-                        <fieldset
-                            class="border border-[#c084fc] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#03030c] animate-scale-3">
+                        <fieldset class="border border-[#c084fc] rounded-xl p-5 mx-5 shadow-2xl animate-scale-3">
                             <legend class="text-lg font-semibold text-purple-400">Programming Languages</legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
                                 <div
@@ -440,8 +467,7 @@
                         </fieldset>
 
                         <!-- Frameworks and Tools card -->
-                        <fieldset
-                            class=" border border-[#22C0D9] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#040e0f] animate-scale-3">
+                        <fieldset class=" border border-[#22C0D9] rounded-xl p-5 mx-5 shadow-2xl animate-scale-3">
                             <legend class="text-lg font-semibold text-[#22C0D9]">Frameworks and Tools</legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
                                 <div
@@ -466,8 +492,7 @@
                         </fieldset>
 
                         <!-- Web Technologies -->
-                        <fieldset
-                            class="border border-[#fb7185] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#0f0408] animate-scale-3">
+                        <fieldset class="border border-[#fb7185] rounded-xl p-5 mx-5 shadow-2xl  animate-scale-3">
                             <legend class="text-lg font-semibold text-[#fb7185]">Web Technologies</legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
                                 <div
@@ -486,8 +511,7 @@
                         </fieldset>
 
                         <!-- Version Control -->
-                        <fieldset
-                            class="border border-[#f97316] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#0f0904] animate-scale-3">
+                        <fieldset class="border border-[#f97316] rounded-xl p-5 mx-5 shadow-2xl animate-scale-3">
                             <legend class="text-lg font-semibold text-[#f97316]">Version Control</legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
                                 <div
@@ -506,8 +530,7 @@
                         </fieldset>
 
                         <!-- ML & DL -->
-                        <fieldset
-                            class=" border border-[#48D27B] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#030e07] animate-scale-3">
+                        <fieldset class=" border border-[#48D27B] rounded-xl p-5 mx-5 shadow-2xl  animate-scale-3">
                             <legend class="text-lg font-semibold text-[#48D27B]">Machine Learning & Deep Learning
                             </legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
@@ -552,8 +575,7 @@
                         </fieldset>
 
                         <!-- Others -->
-                        <fieldset
-                            class="border border-[#a2ddb7] rounded-xl p-5 mx-5 shadow-2xl hover:bg-[#04120a] animate-scale-3">
+                        <fieldset class="border border-[#a2ddb7] rounded-xl p-5 mx-5 shadow-2xl  animate-scale-3">
                             <legend class="text-lg font-semibold text-[#a2ddb7]">Others</legend>
                             <div class="grid grid-cols-2 gap-5 justify-center">
                                 <div
@@ -585,16 +607,12 @@
                     </div>
                 </section>
 
-
                 <!-- projects section -->
                 <section id="projects-section-id" class="mt-20">
                     <!-- projects heading -->
-                    <div class=" mx-auto text-center">
-                        <h1
-                            class="text-[32px] font-bold bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] text-transparent bg-clip-text inline-block ">
-                            Projects
-                        </h1>
-                        <p class="text-gray-300 ">
+                    <div class="max-w-[770px] mx-auto text-center">
+                        <h1 class="title-design">Projects</h1>
+                        <p class="title-description-design">
                             Project Showcase—Where ideas meet execution.
                         </p>
                     </div>
@@ -660,26 +678,66 @@
                     </div>
                 </section>
 
-
                 <!-- contact me section -->
                 <section id="contact-me-section-id" class="mt-20 ">
                     <!-- contact heading -->
-                    <div class=" mx-auto text-center">
-                        <h1
-                            class="text-[32px] font-bold bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] text-transparent bg-clip-text inline-block ">
-                            Contact Me
-                        </h1>
-                        <p class="text-gray-300 ">
+                    <div class="max-w-[770px] mx-auto text-center">
+                        <h1 class="title-design">Contact Me</h1>
+                        <p class="title-description-design">
                             Let's build something Innovative together. Reach out to discuss projects, collaborations, or
                             just want to say hi!
                         </p>
                     </div>
 
                     <div class="flex gap-10 mt-5 mx-5">
+                        <!-- social media -->
+                        <div class="flex-1 grid gap-5">
+                            <div id="contact-me-linkedin-id"
+                                class="card-container animate-scale-3 shadow-15 text-color-14">
+                                <div class="card-logo-container border-color-14">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <div class="text-[12px]">
+                                    <p class="font-semibold">Linkedin</p>
+                                    <p class="opacity-70">Mohammad Abu Bakkar Siddik</p>
+                                </div>
+                            </div>
+                            <div class="card-container animate-scale-3 shadow-15 text-color-8">
+                                <div class="card-logo-container border-color-8">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="text-[12px]">
+                                    <p class="font-semibold">Email</p>
+                                    <p class="opacity-70">siddik56u@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="card-container animate-scale-3 shadow-15 text-color-11">
+                                <div class="card-logo-container border-color-11">
+                                    <i class="fa-solid fa-phone "></i>
+                                </div>
+                                <div class="text-[12px]">
+                                    <p class="font-semibold">Phone</p>
+                                    <p class="opacity-70">+880 1879097422</p>
+                                </div>
+                            </div>
+                            <div id="contact-me-github-id"
+                                class="card-container animate-scale-3 shadow-15 text-color-12">
+                                <div class="card-logo-container border-color-12">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <div class="text-[12px]">
+                                    <p class="font-semibold">Github</p>
+                                    <p class="opacity-70">Mohammad Abu Bakkar Siddik</p>
+                                </div>
+                            </div>
 
-                        <div class="flex-1 bg-[#232A43] shadow-2xl rounded-xl p-7">
+                        </div>
+
+                        <!-- message form -->
+                        <div class="flex-1 bg-color-2 shadow-15 rounded-xl p-7">
                             <div class="flex justify-center items-center gap-1 mx-auto mb-7">
-                                <img src="https://img.icons8.com/?size=80&id=r9qA6fLGZtdf&format=png" alt="" class="h-10 w-10">
+                                <img src="https://img.icons8.com/?size=80&id=r9qA6fLGZtdf&format=png" alt=""
+                                    class="h-10 w-10">
                                 <h2 id="type-text-id-1" class="text-[20px] font-medium whitespace-wrap w-fit"></h2>
                             </div>
                             <form class="grid rounded-xl ">
@@ -687,69 +745,41 @@
                                     <div class="flex-1">
                                         <h3>Name</h3>
                                         <input
-                                            class="bg-[#323b5e] shadow-2xl border-gray-600 rounded-xl outline-none focus:ring-1 p-2 mt-1 mb-4 w-full"
+                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 w-full"
                                             type="text" name="" placeholder="Enter Your Name" autocomplete="on">
                                     </div>
 
                                     <div class="flex-1">
                                         <h3>Email</h3>
                                         <input
-                                            class="bg-[#323b5e] shadow-2xl border-gray-600 rounded-xl outline-none focus:ring-1 p-2 mt-1 mb-4 w-full"
+                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 w-full"
                                             type="text" name="" placeholder="Enter Your Email" autocomplete="off">
                                     </div>
                                 </div>
 
                                 <textarea
-                                    class="bg-[#323b5e] shadow-2xl border-gray-600 rounded-xl outline-none focus:ring-1 p-2 mt-1 mb-4 h-[120px] resize-none"
+                                    class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 h-[120px] resize-none"
                                     placeholder="Your Message" autocomplete="off"></textarea>
 
                                 <button id="login-btn"
-                                    class="font-medium bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] border-none rounded-xl p-2 cursor-pointer shadow-xl hover:shadow-[0_0_5px_1px_#9F5AF5] animate-scale">
+                                    class="font-medium bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] border-none rounded-xl p-2 cursor-pointer shadow-xl hover:shadow-[0_0_5px_1px_#9F5AF5] animate-scale-3">
                                     Send Message <i class="fa-regular fa-paper-plane"></i>
                                 </button>
                             </form>
                         </div>
 
-                        <div class="flex-1 grid gap-3">
-                            <div
-                                class="bg-[#232A43]  rounded-xl p-5 flex gap-2 cursor-pointer hover:shadow-[0_0_5px_2px_silver] animate-scale-2">
-                                <div class="w-10 h-10 flex justify-center items-center bg-[#246658] rounded-xl">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div class="text-[12px]">
-                                    <p class="text-gray-200">Phone</p>
-                                    <p>+880 1879097422</p>
-                                </div>
-                            </div>
-                            <div class="bg-[#232A43] shadow-2xl rounded-xl p-5">
-                                <p>Hello</p>
-                            </div>
-                            <div class="bg-[#232A43] shadow-2xl rounded-xl p-5">
-                                <p>Hello</p>
-                            </div>
-                            <div class="bg-[#232A43] shadow-2xl rounded-xl p-5">
-                                <p>Hello</p>
-                            </div>
-
-
-
-                        </div>
                     </div>
 
                 </section>
 
-
-
                 <!-- Footer section -->
-                <footer class="mt-40 mb-5 text-center text-gray-400">
+                <footer class="text-center text-gray-400 mb-5 mt-40">
                     <p>© 2025 Mohammad Abu Bakkar Siddik | PortFolio. All rights reserved</p>
                 </footer>
+
             </section>
-
         </section>
-
     </main>
-
 
     <!-- connect with js -->
     <script src="script.js"></script>
