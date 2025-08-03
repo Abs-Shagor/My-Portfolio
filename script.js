@@ -2,35 +2,29 @@
 navButtonsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id', 'achievements-btn-id', 'contact-me-btn-id'];
 // sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'contact-me-section-id'];
 
-function changingNavButton(id1) {
+function chnagingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function (event) {
-        /*         
-            if i uncomment event.preventDefault(), the section is not changing by click in the nav button
-            but if its comment out , the section is changing but there is an issue, in small height if i click the
-            a nav button the whole body jump up and the navbar is not showing. so use event.preventDefault() and implement 
-            the code according to it. 
-        */
-        // event.preventDefault(); 
+        event.preventDefault(); 
         new Audio('sound/click2.mp3').play();
+        document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
 
         for (const navButtonId of navButtonsId) {
             document.getElementById(navButtonId).classList.remove('border-b-2',);
         }
         document.getElementById(id1).classList.add('border-b-2',);
-
         if (id1 == 'get-in-touch-id') {
             document.getElementById(id1).classList.remove('border-b-2');
             document.getElementById('contact-me-btn-id').classList.add('border-b-2');
         }
     })
 }
-changingNavButton('home-btn-id');
-changingNavButton('about-me-btn-id');
-changingNavButton('skills-btn-id');
-changingNavButton('projects-btn-id');
-changingNavButton('achievements-btn-id');
-changingNavButton('contact-me-btn-id');
-changingNavButton('get-in-touch-id');
+chnagingSection('home-btn-id', 'home-section-id');
+chnagingSection('about-me-btn-id', 'about-me-section-id');
+chnagingSection('skills-btn-id', 'skills-section-id');
+chnagingSection('projects-btn-id', 'projects-section-id');
+chnagingSection('achievements-btn-id', 'achievements-section-id');
+chnagingSection('contact-me-btn-id', 'contact-me-section-id');
+chnagingSection('get-in-touch-id','contact-me-section-id');
 
 
 
