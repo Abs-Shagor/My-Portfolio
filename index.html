@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- title & logo -->
-    <link class="border rounded-full" rel="shortcut icon" href="images/logo-3.png" type="image/x-icon">
+    <link class="border rounded-full" rel="shortcut icon" href="images/my_logo.png" type="image/x-icon">
     <title>Siddik | PortFolio</title>
 
 
@@ -24,87 +24,121 @@
 
 
 <body class="font-poppins text-white">
+    <!-- screem size showcase. Note: comment it after responsive -->
+    <p id="screen-size" class="text-[14px] fixed"></p>
 
-    <main class="max-w-[1380px] lg:flex lg:items-center gap-5 mx-auto p-3 lg:p-5">
-        <!-- Profile sidebar -->
-        <section class="bg-color-1 max-h-[550px]  border border-gray-600 rounded-3xl p-5">
-            <div
-                class="flex justify-center w-[130px] bg-color-2 rounded-t-3xl rounded-b-2xl mx-auto shadow-1 animate-scale">
-                <img class="w-[110px] h-full" src="images/profileee.png" alt="">
-            </div>
-            <div class="text-center">
-                <div class="relative w-[260px]">
-                    <h3 class="text-[14px] text-shadow font-medium my-3">Mohammad Abu Bakkar Siddik</h3>
-                    <span class="absolute w-[125px] h-[13px] top-1 left-17 shadow-1 animate-ping"></span>
-                    <span class="absolute -top-1 right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></span>
-                    <span
-                        class="absolute -top-1 right-1 w-3 h-3 bg-green-500 rounded-full border-1 border-white"></span>
+    <main class="max-w-[1380px] flex flex-col lg:flex-row lg:items-center gap-3 lg:gap-5 p-3 lg:p-5 mx-auto">
 
-                </div>
-                <span class="text-[12px] bg-color-2 px-4 py-1 rounded-lg shadow-4 ">Web Developer</span>
-            </div>
-            <div class="border border-gray-600 mt-5 mb-8"></div>
-
-            <div class="grid gap-1">
-                <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="card-logo-container shadow-3">
-                        <i class="fa-solid fa-envelope"></i>
+        <!-- Profile sidebar with collaps -->
+        <section id="hamburgerX" class="collapse lg:collapse-open bg-color-1 max-h-[570px] lg:max-w-[300px] border border-gray-600 rounded-3xl py-5 [&_.collapse-title]:p-0 [&_.collapse-title]:min-h-0 [&_.collapse-content]:p-0">
+            <input type="checkbox" class="lg:hidden" />
+            <div class="collapse-title flex justify-between mx-5">
+                <div class="flex gap-5 items-center lg:flex-col">
+                    <div
+                        class="flex justify-center lg:mx-auto bg-color-2 rounded-full shadow-1 pt-2 px-2 sm:pt-2 sm:px-3 lg:px-4 animate-scale">
+                        <img class="w-[40px] sm:w-[70px] md:w-[80px] lg:w-[110px] rounded-full"
+                            src="images/profile_pic.png" alt="Not found">
                     </div>
-                    <div class="text-[12px]">
-                        <p class="font-semibold">Email</p>
-                        <p class="opacity-70">siddik56u@gmail.com</p>
+                    <div class="w-[240px]">
+                        <div class="relative">
+                            <h3 class="text-[13px] sm:text-[14px] text-shadow font-medium mb-3">Mohammad Abu Bakkar Siddik</h3>
+                            <span class="absolute w-[107px] sm:w-[117px] h-[13px] top-1 left-12 shadow-1 animate-ping"></span>
+                            <span class="absolute -top-1 right-5 sm:right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></span>
+                            <span
+                                class="absolute -top-1 right-5 sm:right-1 w-3 h-3 bg-green-500 rounded-full border-1 border-white"></span>
+                        </div>
+                        <div class="lg:text-center">
+                            <span class="text-[12px] bg-color-2 px-4 py-1 rounded-lg shadow-4">Web Developer</span>
+                        </div>
                     </div>
                 </div>
-                <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="card-logo-container shadow-3">
-                        <i class="fa-solid fa-phone"></i>
+
+                <!-- show contents -->
+                <div class="lg:hidden mr-10">
+                    <div id="hamburger" class="">
+                        <i class="fas fa-ellipsis-v"></i>
                     </div>
-                    <div class="text-[12px]">
-                        <p class="font-semibold">Phone</p>
-                        <p class="opacity-70">+880 1879097422</p>
-                    </div>
-                </div>
-                <div class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale">
-                    <div class="card-logo-container shadow-3">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div class="text-[12px]">
-                        <p class="font-semibold">Location</p>
-                        <p class="opacity-70">Chittagong, Bangladesh</p>
-                    </div>
+                    <button id="xIcon" class="hidden">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
             </div>
-            <div class="flex justify-between mt-8 mx-2">
-                <div id="sidebar-github-id" class="card-logo-container shadow-2 hover-2 animate-scale">
-                    <i class="fa-brands fa-github"></i>
-                </div>
-                <div id="sidebar-linkedin-id" class="card-logo-container shadow-2 hover-2 animate-scale">
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <div id="sidebar-facebook-id" class="card-logo-container shadow-2 hover-2 animate-scale">
-                    <i class="fa-brands fa-facebook"></i>
-                </div>
-                <div id="sidebar-x-id" class="card-logo-container shadow-2 hover-2 animate-scale">
-                    <i class="fa-brands fa-x-twitter"></i>
+
+            <div class="collapse-content block lg:block">
+                <div class="border border-gray-600 my-5 mx-5"></div>
+                <div class="flex flex-col gap-5 sm:gap-15 lg:gap-5 justify-between">
+                    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-1 md:gap-5 lg:gap-1 mx-3">
+                        <div
+                            class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale-1">
+                            <div class="card-logo-container shadow-3">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div class="text-[12px]">
+                                <p class="font-semibold">Email</p>
+                                <p class="opacity-70 sm:text-[10px] md:text-[12px]">siddik56u@gmail.com</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale-1">
+                            <div class="card-logo-container shadow-3">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="text-[12px]">
+                                <p class="font-semibold">Phone</p>
+                                <p class="opacity-70 sm:text-[10px] md:text-[12px]">+880 1879097422</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex gap-2 cursor-default p-2 rounded-xl hover:shadow-[0_0_5px_2px_silver] animate-scale-1">
+                            <div class="card-logo-container shadow-3">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="text-[12px]">
+                                <p class="font-semibold">Location</p>
+                                <p class="opacity-70 sm:text-[10px] md:text-[12px]">Chittagong, Bangladesh</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-center lg:flex-row gap-5 lg:justify-between mx-5">
+                        <div id="sidebar-github-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <div id="sidebar-linkedin-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <div id="sidebar-facebook-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <div id="sidebar-x-id" class="card-logo-container shadow-2 hover-2 animate-scale">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
+
         <!-- Navbar + Content Section -->
-        <section class="bg-color-1 flex-1 max-h-[700px]  border border-gray-600 rounded-3xl ">
+        <section class="bg-color-1 flex-1 max-h-[720px]  border border-gray-600 rounded-3xl ">
 
             <!-- Navbar -->
-            <nav class="max-w-[260px] h-[50px] flex justify-center items-center gap-5 bg-[#373738] rounded-full shadow-4 mx-auto mt-5 ">
-                <span id="home-btn-id" class="border-b-2 cursor-pointer animate-scale"><i class="fa-solid fa-house"></i></span>
+            <nav
+                class="max-w-[260px] h-[50px] flex justify-center items-center gap-5 bg-[#373738] rounded-full shadow-4 mx-auto mt-5 ">
+                <span id="home-btn-id" class="border-b-2 cursor-pointer animate-scale"><i
+                        class="fa-solid fa-house"></i></span>
                 <span id="about-me-btn-id" class="cursor-pointer animate-scale"><i class="fa-solid fa-user"></i></span>
                 <span id="skills-btn-id" class="cursor-pointer animate-scale"><i class="fa-solid fa-code"></i></span>
-                <span id="projects-btn-id" class="cursor-pointer animate-scale"><i class="fa-solid fa-folder"></i></span>
-                <span id="achievements-btn-id" class="cursor-pointer animate-scale"><i class="fa-solid fa-trophy"></i></span>
-                <span id="contact-me-btn-id" class="cursor-pointer animate-scale"><i class="fa-solid fa-envelope"></i></span>
+                <span id="projects-btn-id" class="cursor-pointer animate-scale"><i
+                        class="fa-solid fa-folder"></i></span>
+                <span id="achievements-btn-id" class="cursor-pointer animate-scale"><i
+                        class="fa-solid fa-trophy"></i></span>
+                <span id="contact-me-btn-id" class="cursor-pointer animate-scale"><i
+                        class="fa-solid fa-envelope"></i></span>
             </nav>
 
             <!-- Content section -->
-            <section class="max-h-[470px] overflow-y-auto scroll-smooth my-5">
+            <section class="max-h-[480px] overflow-y-auto scroll-smooth my-5">
 
                 <!-- Home section -->
                 <section id="home-section-id" class="mx-5">
@@ -167,7 +201,7 @@
                 <!-- about me section -->
                 <section id="about-me-section-id" class="mt-20 mx-5">
                     <!-- about me heading -->
-                    <div class="max-w-[770px] mx-auto text-center">
+                    <div class="max-w-[602px] mx-auto text-center">
                         <h1 class="title-design">About Me</h1>
                         <div class="title-description-design relative">
                             <span class="top-left-corner-border"></span>
@@ -175,7 +209,7 @@
                             <span class="bottom-left-corner-border"></span>
                             <span class="bottom-right-corner-border"></span>
 
-                            <p class="px-6 py-3">
+                            <p class="px-4 py-2">
                                 Passionate <span class="border-b-1">Full-Stack Developer</span> and <span
                                     class="border-b-1">Competitive Programmer</span>. I build
                                 modern web applications with AI integrations, blending development with algorithmic
@@ -193,20 +227,20 @@
                             <i class="fa-solid fa-rocket"></i> Milestones
                         </h2>
 
-                        <div class="grid grid-cols-4 gap-3 text-center">
-                            <div class="lg:max-w-[150px] xl:max-w-[300px]">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 text-center">
+                            <div class="md:max-w-[150px] xl:max-w-[300px]">
                                 <p class="text-[24px] font-bold">+1</p>
                                 <p class="text-gray-300">YEARS OF EXPERIENCE</p>
                             </div>
-                            <div class="lg:max-w-[150px] xl:max-w-[300px]">
+                            <div class="md:max-w-[150px] xl:max-w-[300px]">
                                 <p class="text-[24px] font-bold">+5</p>
                                 <p class="text-gray-300 ">PROJECTS COMPLETED</p>
                             </div>
-                            <div class="lg:max-w-[150px] xl:max-w-[300px]">
+                            <div class="md:max-w-[150px] xl:max-w-[300px]">
                                 <p class="text-[24px] font-bold">+3</p>
                                 <p class="text-gray-300 ">Research Contribution</p>
                             </div>
-                            <div class="lg:max-w-[150px] xl:max-w-[300px]">
+                            <div class="md:max-w-[150px] xl:max-w-[300px]">
                                 <p class="text-[24px] font-bold">+200</p>
                                 <p class="text-gray-300">Programming Contest</p>
                             </div>
@@ -227,7 +261,7 @@
                             <p class="text-gray-300 font-medium">CGPA: <span class="border-b-1">3.82 out of 4</span>
                             </p>
                             <p class="text-gray-300">International Islamic University Chittagong </p>
-                            <div class="flex gap-5 text-gray-300">
+                            <div class="flex flex-col sm:flex-row gap-2 sm:gap-5 text-gray-300">
                                 <p><i class="fa-regular fa-calendar"></i> January 2021 – January 2025</p>
                                 <p><i class="fa-solid fa-location-dot"></i> Chittagong, Bangladesh</p>
                             </div>
@@ -363,41 +397,74 @@
 
                         </h2>
 
-                        <div class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl p-5 space-y-2 animate-scale-2">
-                            <h3 class="text-[20px] font-semibold">International Collegiate Programming Contest(ICPC)</h3>
+                        <div
+                            class="bg-color-2 shadow-2xl hover:shadow-[0_0_10px_#00FFFF] rounded-xl p-5 space-y-2 animate-scale-2">
+                            <h3 class="text-[20px] font-semibold">International Collegiate Programming Contest(ICPC)
+                            </h3>
                             <div class="text-gray-300 text-justify">
-                                <span class="flex"><li></li><p>Qualified for and participated in International
-                                Collegiate Programming Contest (ICPC) Asia Dhaka Regional
-                                2023 hosted by Bangladesh University of Business and Technology (BUBT).</p></span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>Qualified for and participated in International
+                                        Collegiate Programming Contest (ICPC) Asia Dhaka Regional
+                                        2023 hosted by Bangladesh University of Business and Technology (BUBT).</p>
+                                </span>
                             </div>
 
                             <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Inter</span>
                                 University
                                 Programming Contest (IUPC) </h3>
                             <div class="text-gray-300 text-justify">
-                                <span class="flex"><li></li><p>2nd Runner Up among 70 Teams in IIUC Inter University Programming Contest (IUPC)
-                                    2023.</p></span>
-                                <span class="flex"><li></li><p>11th among 48 Teams in CU Inter University Programming Contest (IUPC) 2024.</p></span>
-                                <span class="flex"><li></li><p>24th among 108 Teams in IUT Inter University Programming Contest (IUPC) 2024.</p></span>
-                                <span class="flex"><li></li><p>25th among 70 Teams in PU Inter University Programming Contest (IUPC) 2024.</p></span>
-                                <span class="flex"><li></li><p>43th among 160 Teams in KUET Inter University Programming Contest (IUPC) 2025.</p></span>
-                                <span class="flex"><li></li><p>Also participated in BUET IUPC, CUET IUPC, SUST IUPC, SEC IUPC.</p></span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>2nd Runner Up among 70 Teams in IIUC Inter University Programming Contest (IUPC)
+                                        2023.</p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>11th among 48 Teams in CU Inter University Programming Contest (IUPC) 2024.</p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>24th among 108 Teams in IUT Inter University Programming Contest (IUPC) 2024.</p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>25th among 70 Teams in PU Inter University Programming Contest (IUPC) 2024.</p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>43th among 160 Teams in KUET Inter University Programming Contest (IUPC) 2025.
+                                    </p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>Also participated in BUET IUPC, CUET IUPC, SUST IUPC, SEC IUPC.</p>
+                                </span>
                             </div>
 
                             <h3 class="text-[20px] font-semibold mt-5"><span class="border-b-1">Intra</span>
                                 University
                                 Programming Contest (IUPC) </h3>
                             <div class="text-gray-300 text-justify">
-                                <span class="flex"><li></li><p>2nd Runner Up in IIUC Intra-University Programming Contest 2021 organized by
-                                    IIUCCPS.</p></span>
-                                <span class="flex"><li></li><p>2nd Runner Up in IIUC Intra-University Programming Contest 2023 organized by
-                                    IIUCCPS</p></span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>2nd Runner Up in IIUC Intra-University Programming Contest 2021 organized by
+                                        IIUCCPS.</p>
+                                </span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>2nd Runner Up in IIUC Intra-University Programming Contest 2023 organized by
+                                        IIUCCPS</p>
+                                </span>
 
                             </div>
 
                             <h3 class="text-[20px] font-semibold mt-5">Best Performer</h3>
                             <div class="text-gray-300 text-justify">
-                                <span class="flex"><li></li><p>Competitive Programming Bootcamp Spring 2022 hosted by IIUCCPS, IIUC</p></span>
+                                <span class="flex">
+                                    <li></li>
+                                    <p>Competitive Programming Bootcamp Spring 2022 hosted by IIUCCPS, IIUC</p>
+                                </span>
                             </div>
 
                         </div>
@@ -408,12 +475,10 @@
                 <!-- Technical Skills section -->
                 <section id="skills-section-id" class="mt-20 mx-5">
                     <!-- Technical Skills heading -->
-                    <div class="max-w-[770px] mx-auto text-center">
+                    <div class="max-w-[600px] mx-auto text-center">
                         <h1 class="title-design">Technical Skills</h1>
                         <p class="title-description-design">
-                            A detailed showcase of my multidisciplinary technical
-                            skills, covering Programming Languages, Frameworks, Machine Learning and
-                            others related domains.
+                            A detailed showcase of my multidisciplinary technical skills across various domains.
                         </p>
                     </div>
 
@@ -424,22 +489,26 @@
                             <div class="grid grid-cols-2 gap-5 justify-center font-medium">
                                 <div
                                     class="flex gap-1 justify-center items-center  bg-color-2 rounded-full px-4 py-1 cursor-pointer shadow-7">
-                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=40670&format=png" alt="">
+                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=40670&format=png"
+                                        alt="">
                                     <p>C</p>
                                 </div>
                                 <div
                                     class="flex gap-1 justify-center items-center bg-color-2 rounded-full px-4 py-1 cursor-pointer shadow-7">
-                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=40669&format=png" alt="">
-                                    <p >C++</p>
+                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=40669&format=png"
+                                        alt="">
+                                    <p>C++</p>
                                 </div>
                                 <div
                                     class="flex gap-1 justify-center items-center bg-color-2 rounded-full px-4 py-1 cursor-pointer shadow-7">
-                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=13441&format=png" alt="">
-                                    <p >Python</p>
+                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=13441&format=png"
+                                        alt="">
+                                    <p>Python</p>
                                 </div>
                                 <div
                                     class="flex gap-1 justify-center items-center bg-color-2 rounded-full px-4 py-1 cursor-pointer shadow-7">
-                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=108784&format=png" alt="">
+                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=108784&format=png"
+                                        alt="">
                                     <p>JavaScript</p>
                                 </div>
                             </div>
@@ -451,7 +520,8 @@
                             <div class="grid grid-cols-2 gap-5 justify-center font-medium">
                                 <div
                                     class="flex gap-1 justify-center items-center bg-color-2 rounded-full px-4 py-1 cursor-pointer shadow-8">
-                                    <img class="w-6 h-6" src="https://img.icons8.com/?size=48&id=x7XMNGh2vdqA&format=png" alt="">
+                                    <img class="w-6 h-6"
+                                        src="https://img.icons8.com/?size=48&id=x7XMNGh2vdqA&format=png" alt="">
                                     <p>Tailwind</p>
                                 </div>
                                 <div
@@ -588,7 +658,7 @@
                 <!-- projects section -->
                 <section id="projects-section-id" class="mt-20 mx-5">
                     <!-- projects heading -->
-                    <div class="max-w-[770px] mx-auto text-center">
+                    <div class="max-w-[600px] mx-auto text-center">
                         <h1 class="title-design">Projects</h1>
                         <p class="title-description-design">
                             Project Showcase—Where ideas meet execution.
@@ -633,7 +703,10 @@
                                 <h3 class="text-[24px] text-[#9F5AF5] font-bold">PortFolio</h3>
                                 <h4 class="text-[18px] text-[#9F5AF5] text-end italic">–Mohammad Abu Bakkar Siddik</h4>
 
-                                <p class=" text-[14px] text-gray-300 text-justify my-5">My portfolio website highlights my skills, projects, and experience as a developer. It reflects my personal brand and helps connect with clients, employers, and tech communities. The site is fully responsive, interactive, and built with modern web technologies. 
+                                <p class=" text-[14px] text-gray-300 text-justify my-5">My portfolio website highlights
+                                    my skills, projects, and experience as a developer. It reflects my personal brand
+                                    and helps connect with clients, employers, and tech communities. The site is fully
+                                    responsive, interactive, and built with modern web technologies.
                                 </p>
                                 <div class="flex justify-between">
                                     <button class="text-[#9F5AF5] font-medium cursor-pointer hover:border-b-1"><a
@@ -647,7 +720,7 @@
                             </div>
                             <div class="flex-1 flex justify-center items-center">
                                 <img class="max-w-[300px] rounded-[20px] rotate-20 animate-rotate shadow-[0_0_10px_#9F5AF5]"
-                                    src="images/portfolio_pic.png" alt="">
+                                    src="images/Protfolio_Home.png" alt="">
                             </div>
 
                         </div>
@@ -657,14 +730,14 @@
                 <!-- contact me section -->
                 <section id="contact-me-section-id" class="mt-20 mx-5">
                     <!-- contact heading -->
-                    <div class="max-w-[770px] mx-auto text-center">
+                    <div class="max-w-[600px] mx-auto text-center">
                         <h1 class="title-design">Contact Me</h1>
                         <p class="title-description-design">
                             Feel free to contact me if you have any questions - I'd love to hear from you!
                         </p>
                     </div>
 
-                    <div class="contact-section-responsive gap-5 xl:gap-15 mt-7">
+                    <div class="contact-section-responsive gap-5 xl:gap-15 mt-10">
                         <!-- social media -->
                         <div class="flex-1 social-media-responsive grid grid-cols-2 gap-4">
                             <div id="contact-me-linkedin-id"

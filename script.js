@@ -4,7 +4,7 @@ navButtonsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn
 
 function chnagingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function (event) {
-        event.preventDefault(); 
+        event.preventDefault();
         new Audio('sound/click2.mp3').play();
         document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
 
@@ -24,29 +24,29 @@ chnagingSection('skills-btn-id', 'skills-section-id');
 chnagingSection('projects-btn-id', 'projects-section-id');
 chnagingSection('achievements-btn-id', 'achievements-section-id');
 chnagingSection('contact-me-btn-id', 'contact-me-section-id');
-chnagingSection('get-in-touch-id','contact-me-section-id');
+chnagingSection('get-in-touch-id', 'contact-me-section-id');
 
 
 
 function openLink(id, address) {
-    document.getElementById(id).addEventListener('click', function(event) {
+    document.getElementById(id).addEventListener('click', function (event) {
         event.preventDefault();
         new Audio('sound/click2.mp3').play();
         window.open(address, '_blank');
     })
 }
-openLink('sidebar-github-id','https://github.com/Abs-Shagor');
-openLink('sidebar-linkedin-id','https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
-openLink('sidebar-facebook-id','https://www.facebook.com/absShagor99');
-openLink('sidebar-x-id','https://x.com/abs_shagor?s=21');
+openLink('sidebar-github-id', 'https://github.com/Abs-Shagor');
+openLink('sidebar-linkedin-id', 'https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
+openLink('sidebar-facebook-id', 'https://www.facebook.com/absShagor99');
+openLink('sidebar-x-id', 'https://x.com/abs_shagor?s=21');
 
-openLink('about-me-cf-id','https://codeforces.com/profile/Abs_Shagor56');
-openLink('about-me-cc-id','https://www.codechef.com/users/abs_shagor56');
-openLink('about-me-lc-id','https://leetcode.com/u/AbsShagor56/');
-openLink('about-me-vj-id','https://vjudge.net/user/Abs_Shagor56');
+openLink('about-me-cf-id', 'https://codeforces.com/profile/Abs_Shagor56');
+openLink('about-me-cc-id', 'https://www.codechef.com/users/abs_shagor56');
+openLink('about-me-lc-id', 'https://leetcode.com/u/AbsShagor56/');
+openLink('about-me-vj-id', 'https://vjudge.net/user/Abs_Shagor56');
 
-openLink('contact-me-linkedin-id','https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
-openLink('contact-me-github-id','https://github.com/Abs-Shagor');
+openLink('contact-me-linkedin-id', 'https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
+openLink('contact-me-github-id', 'https://github.com/Abs-Shagor');
 
 
 
@@ -74,3 +74,26 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(container);
+
+// show the current screen size
+function showSize() {
+    const p_container = document.getElementById('screen-size');
+    p_container.innerText = `Screen [Width: ${window.innerWidth}px - Height: ${window.innerHeight}px]`;
+}
+window.addEventListener('resize', showSize);
+showSize();
+
+// Hamburgr button
+document.getElementById('hamburgerX').addEventListener('click', function (event) {
+
+    const ham = document.getElementById('hamburger');
+    const x = document.getElementById('xIcon');
+    if (ham.classList.contains('hidden')) {
+        ham.classList.remove('hidden');
+        x.classList.add('hidden');
+    }
+    else {
+        ham.classList.add('hidden');
+        x.classList.remove('hidden');
+    }
+});
