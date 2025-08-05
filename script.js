@@ -86,17 +86,20 @@ observer.observe(container);
 // window.addEventListener('resize', showSize);
 // showSize();
 
-// Hamburgr button
-document.getElementById('sidebar-id').addEventListener('click', function (event) {
+// profile sidebar Hamburgr and X icon toggling
+const checkbox = document.querySelector('section.collapse input[type="checkbox"]');
+const hamburger = document.getElementById('hamburger');
+const xIcon = document.getElementById('xIcon');
 
-    const ham = document.getElementById('hamburger');
-    const x = document.getElementById('xIcon');
-    if (ham.classList.contains('hidden')) {
-        ham.classList.remove('hidden');
-        x.classList.add('hidden');
-    }
-    else {
-        ham.classList.add('hidden');
-        x.classList.remove('hidden');
+checkbox.addEventListener('change', function () {
+    if (checkbox.checked) {
+        // Opened
+        hamburger.classList.add('hidden');
+        xIcon.classList.remove('hidden');
+    } else {
+        // Closed
+        hamburger.classList.remove('hidden');
+        xIcon.classList.add('hidden');
     }
 });
+
