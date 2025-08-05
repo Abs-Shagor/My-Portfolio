@@ -7,6 +7,9 @@ function chnagingSection(id1, id2) {
         event.preventDefault();
         new Audio('sound/click2.mp3').play();
         document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
+        if(id1=='home-btn-id') {
+            document.getElementById('body-id').scrollIntoView({ behavior: "smooth" })
+        }
 
         for (const navButtonId of navButtonsId) {
             document.getElementById(navButtonId).classList.remove('border-b-2',);
@@ -76,15 +79,15 @@ const observer = new IntersectionObserver(entries => {
 observer.observe(container);
 
 // show the current screen size
-function showSize() {
-    const p_container = document.getElementById('screen-size');
-    p_container.innerText = `Screen [Width: ${window.innerWidth}px - Height: ${window.innerHeight}px]`;
-}
-window.addEventListener('resize', showSize);
-showSize();
+// function showSize() {
+//     const p_container = document.getElementById('screen-size');
+//     p_container.innerText = `Screen [Width: ${window.innerWidth}px - Height: ${window.innerHeight}px]`;
+// }
+// window.addEventListener('resize', showSize);
+// showSize();
 
 // Hamburgr button
-document.getElementById('hamburgerX').addEventListener('click', function (event) {
+document.getElementById('sidebar-id').addEventListener('click', function (event) {
 
     const ham = document.getElementById('hamburger');
     const x = document.getElementById('xIcon');
