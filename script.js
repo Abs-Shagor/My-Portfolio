@@ -1,13 +1,22 @@
+/* show the current screen size */
+// function showSize() {
+//     const p_container = document.getElementById('screen-size');
+//     p_container.innerText = `Screen [Width: ${window.innerWidth}px - Height: ${window.innerHeight}px]`;
+// }
+// window.addEventListener('resize', showSize);
+// showSize();
 
+
+/* changing section by clicking nav Button */
 navButtonsId = ['home-btn-id', 'about-me-btn-id', 'skills-btn-id', 'projects-btn-id', 'achievements-btn-id', 'contact-me-btn-id'];
-// sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'contact-me-section-id'];
+sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'projects-section-id', 'achievements-section-id', 'contact-me-section-id'];
 
 function chnagingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function (event) {
         event.preventDefault();
         new Audio('sound/click2.mp3').play();
         document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
-        if(id1=='home-btn-id') {
+        if (id1 == 'home-btn-id') {
             document.getElementById('body-id').scrollIntoView({ behavior: "smooth" })
         }
 
@@ -21,16 +30,12 @@ function chnagingSection(id1, id2) {
         }
     })
 }
-chnagingSection('home-btn-id', 'home-section-id');
-chnagingSection('about-me-btn-id', 'about-me-section-id');
-chnagingSection('skills-btn-id', 'skills-section-id');
-chnagingSection('projects-btn-id', 'projects-section-id');
-chnagingSection('achievements-btn-id', 'achievements-section-id');
-chnagingSection('contact-me-btn-id', 'contact-me-section-id');
-chnagingSection('get-in-touch-id', 'contact-me-section-id');
+for (let k = 0; k < navButtonsId.length; k++) {
+    chnagingSection(navButtonsId[k], sectionsId[k]);
+}
 
 
-
+/* Open link */
 function openLink(id, address) {
     document.getElementById(id).addEventListener('click', function (event) {
         event.preventDefault();
@@ -54,6 +59,8 @@ openLink('contact-me-github-id', 'https://github.com/Abs-Shagor');
 
 
 
+
+/* Contact section. Text typing */
 const container = document.getElementById("type-text-id-1");
 const text = "Send a Message";
 
@@ -65,28 +72,47 @@ function typeText() {
         setTimeout(typeText, 100); // speed
     }
 }
-
-// Trigger when visible
-const observer = new IntersectionObserver(entries => {
+const contactMessageObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             typeText();
-            observer.disconnect(); // stop observing after one run
+            observer.disconnect();
         }
     });
 });
+contactMessageObserver.observe(container);
 
-observer.observe(container);
 
-// show the current screen size
-// function showSize() {
-//     const p_container = document.getElementById('screen-size');
-//     p_container.innerText = `Screen [Width: ${window.innerWidth}px - Height: ${window.innerHeight}px]`;
-// }
-// window.addEventListener('resize', showSize);
-// showSize();
+/* Changing bottum border/bar of navbar button if the section arrived in screen */
+const All_ids = {
+    'home-section-id': 'home-btn-id',
+    'about-me-section-id': 'about-me-btn-id',
+    'skills-section-id': 'skills-btn-id',
+    'projects-section-id': 'projects-btn-id',
+    'achievements-section-id': 'achievements-btn-id',
+    'contact-me-section-id': 'contact-me-btn-id'
+};
+function changingNavButtonBar(id) {
+    for (const navButtonId of navButtonsId) {
+        document.getElementById(navButtonId).classList.remove('border-b-2');
+    }
+    document.getElementById(id).classList.add('border-b-2');
+}
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const navId = All_ids[entry.target.id];
+            changingNavButtonBar(navId);
+        }
+    });
+});
+Object.keys(All_ids).forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    if (section) sectionObserver.observe(section);
+});
 
-// profile sidebar Hamburgr and X icon toggling
+
+/* profile sidebar Hamburgr and X icon toggling */
 const checkbox = document.querySelector('section.collapse input[type="checkbox"]');
 const hamburger = document.getElementById('hamburger');
 const xIcon = document.getElementById('xIcon');
