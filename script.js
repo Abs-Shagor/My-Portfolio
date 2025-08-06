@@ -76,7 +76,7 @@ const contactMessageObserver = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             typeText();
-            observer.disconnect();
+            contactMessageObserver.disconnect();
         }
     });
 });
@@ -105,7 +105,7 @@ const sectionObserver = new IntersectionObserver(entries => {
             changingNavButtonBar(navId);
         }
     });
-});
+},{threshold:0.1});
 Object.keys(All_ids).forEach(sectionId => {
     const section = document.getElementById(sectionId);
     if (section) sectionObserver.observe(section);
