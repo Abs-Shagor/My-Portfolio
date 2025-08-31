@@ -18,6 +18,9 @@
     <!-- connect Fontawesome -->
     <script src="https://kit.fontawesome.com/f00281792d.js" crossorigin="anonymous"></script>
 
+    <!-- Include SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- connect CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -162,7 +165,7 @@
                         </p>
 
                         <div class="flex gap-7 items-center ">
-                            <button class=" button-1 animate-scale" onclick="new Audio('sound/click2.mp3').play()">
+                            <button class=" button-1 animate-scale">
                                 <a href="resume & cv/Mohammad Abu Bakkar Siddik_CV.pdf" download="download"><i
                                         class="fa-solid fa-download"></i> Download CV</a>
                             </button>
@@ -679,7 +682,7 @@
 
                         <!-- mobile bank project -->
                         <div
-                            class="flex flex-col-reverse sm:flex-row gap-5 items-center bg-color-2 rounded-xl p-5 mb-5 shadow-2xl hover:shadow-[0_0_10px_0_#0874F2] animate-scale-2">
+                            class="flex flex-col-reverse sm:flex-row gap-5 items-center bg-color-2 rounded-xl p-5 mb-5 shadow-2xl hover:shadow-[0_0_10px_0_#0874F2] main-div animate-scale-2 ">
                             <div class="flex-1">
                                 <h3 class="text-[24px] text-[#0874F2] font-bold">Payooo</h3>
                                 <h4 class="text-[18px] text-[#0874F2] text-end italic">–Mobile Financial Services</h4>
@@ -709,7 +712,7 @@
 
                         <!-- my portfolio website -->
                         <div
-                            class="flex flex-col-reverse sm:flex-row gap-5 items-center bg-color-2 rounded-xl p-5 mb-5 shadow-2xl hover:shadow-[0_0_10px_0_#c084fc] animate-scale-2">
+                            class="flex flex-col-reverse sm:flex-row gap-5 items-center bg-color-2 rounded-xl p-5 mb-5 shadow-2xl hover:shadow-[0_0_10px_0_#c084fc] main-div animate-scale-2">
                             <div class="flex-1">
                                 <h3 class="text-[24px] text-[#9F5AF5] font-bold">PortFolio</h3>
                                 <h4 class="text-[18px] text-[#9F5AF5] text-end italic">–Mohammad Abu Bakkar Siddik</h4>
@@ -801,28 +804,32 @@
                                     class="h-10 w-10">
                                 <h2 id="type-text-id-1" class="text-[20px] font-medium whitespace-wrap w-fit"></h2>
                             </div>
-                            <form class="grid rounded-xl ">
+
+                            <form id="contact-form" action="https://formspree.io/f/xqadbgql" method="POST"
+                                class="grid rounded-xl">
                                 <div class="flex flex-col sm:flex-row sm:gap-5">
                                     <div class="flex-1">
                                         <h3>Name</h3>
                                         <input
-                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 w-full"
-                                            type="text" name="" placeholder="Enter Your Name" autocomplete="on">
+                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none p-2 mt-1 mb-4 w-full"
+                                            type="text" name="name" placeholder="Enter Your Name" autocomplete="off"
+                                            required>
                                     </div>
 
                                     <div class="flex-1">
                                         <h3>Email</h3>
                                         <input
-                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 w-full"
-                                            type="text" name="" placeholder="Enter Your Email" autocomplete="off">
+                                            class="bg-color-3 border-none shadow-15 rounded-xl outline-none p-2 mt-1 mb-4 w-full"
+                                            type="email" name="email" placeholder="Enter Your Email" autocomplete="off"
+                                            required>
                                     </div>
                                 </div>
 
                                 <textarea
-                                    class="bg-color-3 border-none shadow-15 rounded-xl outline-none  p-2 mt-1 mb-4 h-[100px] resize-none"
-                                    placeholder="Your Message" autocomplete="off"></textarea>
+                                    class="bg-color-3 border-none shadow-15 rounded-xl outline-none p-2 mt-1 mb-4 h-[100px] resize-none"
+                                    name="message" placeholder="Your Message" autocomplete="off" required></textarea>
 
-                                <button id="login-btn"
+                                <button type="submit" 
                                     class="font-medium bg-gradient-to-r from-[#4080F6] to-[#9F5AF5] border-none rounded-xl p-2 cursor-pointer shadow-xl hover:shadow-[0_0_5px_1px_#9F5AF5] animate-scale-3">
                                     Send Message <i class="fa-regular fa-paper-plane"></i>
                                 </button>

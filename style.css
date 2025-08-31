@@ -235,7 +235,7 @@
 .animate-rotate {
   transition: 1.2s ease;
 }
-.animate-rotate:hover {
+.main-div:hover .animate-rotate {
   cursor: pointer;
   transform: rotate(-20deg);
 }

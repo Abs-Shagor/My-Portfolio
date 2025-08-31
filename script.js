@@ -14,7 +14,7 @@ sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'pr
 function chnagingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function (event) {
         event.preventDefault();
-        new Audio('sound/click2.mp3').play();
+        // new Audio('sound/click2.mp3').play();
         document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
         if (id1 == 'home-btn-id') {
             document.getElementById('body-id').scrollIntoView({ behavior: "smooth" })
@@ -39,7 +39,7 @@ for (let k = 0; k < navButtonsId.length; k++) {
 function openLink(id, address) {
     document.getElementById(id).addEventListener('click', function (event) {
         event.preventDefault();
-        new Audio('sound/click2.mp3').play();
+        // new Audio('sound/click2.mp3').play();
         window.open(address, '_blank');
     })
 }
@@ -105,7 +105,7 @@ const sectionObserver = new IntersectionObserver(entries => {
             changingNavButtonBar(navId);
         }
     });
-},{threshold:0.1});
+}, { threshold: 0.1 });
 Object.keys(All_ids).forEach(sectionId => {
     const section = document.getElementById(sectionId);
     if (section) sectionObserver.observe(section);
@@ -127,5 +127,53 @@ checkbox.addEventListener('change', function () {
         hamburger.classList.remove('hidden');
         xIcon.classList.add('hidden');
     }
+});
+
+// contact form: send message to gmail:
+const form = document.getElementById('contact-form');
+
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const formData = new FormData(form);
+
+    // Send to Formspree
+    fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+        if (response.ok) {
+            Swal.fire({
+                icon: "success",
+                title: "Message sent successfully!",
+                background: "#1E1E1F",
+                color: "#ffffff",
+                timer: 2000,
+                showConfirmButton: false
+            });
+            form.reset();
+        } else {
+            Swal.fire({
+                icon: "error",
+                title: "Oops! Something went wrong",
+                background: "#1E1E1F",
+                color: "#ffffff",
+                timer: 2000,
+                showConfirmButton: false
+            });
+        }
+    })
+    .catch(() => {
+        Swal.fire({
+            icon: "error",
+            title: "Oops! Something went wrong",
+            background: "#1E1E1F",
+            color: "#ffffff",
+            timer: 2000,
+            showConfirmButton: false
+        });
+    });
 });
 
