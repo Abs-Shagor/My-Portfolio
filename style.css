@@ -350,3 +350,17 @@
     gap: 40px;
   }
 }
+
+/* shine animation */
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+.shine1 {
+  /* background: linear-gradient(110deg,#373738 45%,#8c8cc7 55%,#373738); */
+  /* background: linear-gradient(110deg, #2c2c2c 45%, #9b59b6 55%, #2c2c2c); */
+  background: linear-gradient(110deg, #1a1a1a 45%, #3498db 55%, #1a1a1a);
+
+  background-size: 200% 100%;
+  animation: shine 5s linear infinite;
+}
