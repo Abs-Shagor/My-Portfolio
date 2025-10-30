@@ -8,6 +8,7 @@
 }
 
 
+
 .bg-color-1 {
   background-color: #1E1E1F;
 }
@@ -206,6 +207,7 @@
 .animate-scale {
   transition: .7s ease;
 }
+
 .animate-scale:hover {
   transform: scale(1.1);
 }
@@ -213,6 +215,7 @@
 .animate-scale-1 {
   transition: .7s ease;
 }
+
 .animate-scale-1:hover {
   transform: scale(1.06);
 }
@@ -220,6 +223,7 @@
 .animate-scale-2 {
   transition: .7s ease;
 }
+
 .animate-scale-2:hover {
   background: #161625;
   transform: scale(1.02);
@@ -228,6 +232,7 @@
 .animate-scale-3 {
   transition: .7s ease;
 }
+
 .animate-scale-3:hover {
   transform: scale(1.05);
 }
@@ -235,6 +240,7 @@
 .animate-rotate {
   transition: 1.2s ease;
 }
+
 .main-div:hover .animate-rotate {
   cursor: pointer;
   transform: rotate(-20deg);
@@ -338,11 +344,13 @@
   .contact-section-responsive {
     display: flex;
   }
+
   .social-media-responsive {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
 @media screen and (max-width: 1120px) {
   .contact-section-responsive {
     display: flex;
@@ -353,9 +361,15 @@
 
 /* shine animation */
 @keyframes shine {
-  0% { background-position: 200% 0; }
-  100% { background-position: -200% 0; }
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
+
 .shine1 {
   /* background: linear-gradient(110deg,#373738 45%,#8c8cc7 55%,#373738); */
   /* background: linear-gradient(110deg, #2c2c2c 45%, #9b59b6 55%, #2c2c2c); */

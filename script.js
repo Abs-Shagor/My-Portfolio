@@ -14,6 +14,7 @@ sectionsId = ['home-section-id', 'about-me-section-id', 'skills-section-id', 'pr
 function chnagingSection(id1, id2) {
     document.getElementById(id1).addEventListener('click', function (event) {
         event.preventDefault();
+        
         // new Audio('sound/click2.mp3').play();
         document.getElementById(id2).scrollIntoView({ behavior: "smooth" })
         if (id1 == 'home-btn-id') {
@@ -176,4 +177,5 @@ form.addEventListener('submit', function(event) {
         });
     });
 });
+
 
