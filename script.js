@@ -47,7 +47,7 @@ function openLink(id, address) {
 openLink('sidebar-github-id', 'https://github.com/Abs-Shagor');
 openLink('sidebar-linkedin-id', 'https://www.linkedin.com/in/mohammad-abu-bakkar-siddik-829451295/');
 openLink('sidebar-facebook-id', 'https://www.facebook.com/absShagor99');
-openLink('sidebar-x-id', 'https://x.com/abs_shagor?s=21');
+openLink('sidebar-x-id', 'https://x.com/siddik56u');
 
 openLink('about-me-cf-id', 'https://codeforces.com/profile/Abs_Shagor56');
 openLink('about-me-cc-id', 'https://www.codechef.com/users/abs_shagor56');

@@ -187,6 +187,14 @@
   box-shadow: 0 0 5px 0 #a2ddb7;
 }
 
+.shadow-19 {
+  box-shadow: 0 0 5px 0 #d6af13;
+}
+
+.shadow-19:hover {
+  box-shadow: 0 0 10px 0 #d6af13;
+}
+
 /* scrolling/moving Text from right to left */
 @keyframes scroll-left {
   0% {
